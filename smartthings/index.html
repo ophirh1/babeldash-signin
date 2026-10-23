@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BabelDash sign-in</title>
+<style>body{font-family:system-ui,sans-serif;background:#0F1012;color:#F2F3F5;margin:0;padding:32px 20px;line-height:1.5}
+a.b{display:inline-block;background:#1967D2;color:#fff;padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:600}
+code{background:#24272D;padding:3px 7px;border-radius:6px;word-break:break-all}.m{color:#A7ADB8}</style></head>
+<body><p style="font-size:22px;font-weight:700;margin-top:0"><span style="color:#E8402A">●</span> BabelDash</p>
+<p id="t">Signed in to SmartThings. Handing the code back to the app…</p>
+<p><a id="open" class="b" href="#">Open BabelDash</a></p>
+<p class="m" id="c"></p>
+<script>
+(function(){var q=location.search||'';var target='babeldash://smartthings'+q;
+document.getElementById('open').href=target;
+var m=/[?&]code=([^&]+)/.exec(q);
+if(m){document.getElementById('c').innerHTML='If the app does not open by itself, tap the button, or type this code into BabelDash under Gate setup → "Code from the browser": <code>'+decodeURIComponent(m[1])+'</code>';}
+else{document.getElementById('t').textContent='No code in this address. Start the sign-in again from BabelDash → Settings → Gate setup.';}
+setTimeout(function(){location.replace(target);},300);})();
+</script></body></html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apex Dash privacy policy</title>
+<meta name="description" content="What the Apex Dash app keeps on your phone, what it sends, to whom and why.">
+<style>
+:root{--ground:#0F1012;--text:#F2F3F5;--text2:#A7ADB8;--line:#2A2E35;--inset:#1A1C20;--accent:#E8402A;--link:#7FB0FF}
+@media (prefers-color-scheme: light){:root{--ground:#FFFFFF;--text:#16181C;--text2:#555B66;--line:#E3E5E9;--inset:#F4F5F7;--link:#1967D2}}
+html{-webkit-text-size-adjust:100%}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--ground);color:var(--text);margin:0;line-height:1.6}
+main{max-width:720px;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:30px;line-height:1.2;margin:0 0 6px}
+h2{font-size:20px;margin:36px 0 8px;padding-top:20px;border-top:1px solid var(--line)}
+h3{font-size:16px;margin:22px 0 4px}
+p,li{font-size:16px}
+ul{padding-left:20px}
+li{margin:4px 0}
+a{color:var(--link)}
+.brand{font-weight:700;font-size:15px;color:var(--text2);margin:0 0 18px}
+.brand b{color:var(--accent)}
+.m{color:var(--text2)}
+.box{background:var(--inset);border-radius:12px;padding:14px 18px;margin:16px 0}
+.box ul{margin:6px 0}
+code{background:var(--inset);padding:1px 6px;border-radius:5px;font-size:14px}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:8px 0}
+th,td{text-align:left;vertical-align:top;padding:8px 10px 8px 0;border-bottom:1px solid var(--line)}
+th{color:var(--text2);font-weight:600}
+@media (max-width:520px){table,thead,tbody,tr,th,td{display:block}thead{display:none}td{border:0;padding:2px 0}tr{border-bottom:1px solid var(--line);padding:8px 0}td:first-child{font-weight:600}}
+</style>
+</head>
+<body>
+<main>
+<p class="brand"><b>●</b> Apex Dash</p>
+<h1>Privacy policy</h1>
+<p class="m">Effective 24 November 2026. Applies to the Apex Dash app for Android (<code>dev.apexdash.app</code>) and iPhone.</p>
+
+<p>Apex Dash is a motorcycle app: it shows Android Auto on the bike's dashboard, records your rides and helps you plan trips. It is made by an independent developer, the one named on its Google Play and App Store pages ("we" below). This page says what the app keeps, what it sends, to whom and why.</p>
+
+<div class="box">
+<strong>In short</strong>
+<ul>
+<li>Your rides, tracks, trips, photos and the bike's details stay on your phone.</li>
+<li>The app checks in with our server so we can see which phones run it, fix crashes and see what is used. That check-in never includes your position, a track, the bike's VIN or anything you typed, except the rider name you choose to set.</li>
+<li>Optional features send what they need to work (a riding group gets your position, a trip plan sends its stops to a route planner), and only while you use them.</li>
+<li>No ads, no selling or sharing of your data for advertising, no tracking across other apps or sites.</li>
+</ul>
+</div>
+
+<h2>What stays on your phone</h2>
+<ul>
+<li><strong>Rides:</strong> summaries, GPS tracks, lean and speed, marks and notes, ride scores and the ride mentor's analysis.</li>
+<li><strong>Trips</strong> you plan, and the <strong>photos</strong> the trip diary shows: it reads the photos you took during a ride to lay them on the map, on the phone. Nothing is copied or uploaded.</li>
+<li><strong>The bike:</strong> what the dashboard reports (its name, size and, in the protocol log, its VIN), and the head-unit certificate.</li>
+<li><strong>Settings</strong>, your emergency contact, sign-in tokens for the gate, and logs.</li>
+<li><strong>Backups</strong> are files you save or share yourself, to a place you pick. We never receive them.</li>
+</ul>
+
+<h2>What leaves your phone, and to whom</h2>
+
+<h3>1. Our check-in server (every install)</h3>
+<p>When the app opens, when a ride starts, and every 6 hours during a ride, it checks in with our server. The check-in carries:</p>
+<ul>
+<li>an install ID made on the phone, and a key that proves it is the same install;</li>
+<li>the app version, the phone model, the Android or iOS version and the phone's language;</li>
+<li>bike or phone mode, which features are on, and the rider name if you set one;</li>
+<li>counts since the last check-in: rides started and saved, kilometres in tens, minutes moving, how often screens and features were used, coarse ride-length bands, and short fixed reasons a bike connection failed. A count says "how many", never "where" or "when";</li>
+<li>on Android, the phone's standard security report (Android key attestation): whether its storage is hardware-backed, whether it booted a verified system, whether the bootloader is locked, and the app's ID and signing certificate;</li>
+<li>when the app crashed, the error and the lines of code where it happened, with no ride data, places or typed text.</li>
+</ul>
+<p><strong>Never sent:</strong> your position, a track, the bike's VIN or serial, sign-in tokens, your emergency contact, photos or anything you typed other than the rider name.</p>
+<p><strong>Why:</strong> the app is shared with a limited group. We use this to see which phones run it and stop one that shouldn't, to fix crashes, to switch features on or off and to learn what is worth improving. It is not used for advertising.</p>
+<p><strong>Where and how long:</strong> the server runs on Cloudflare, which, like any web host, sees your IP address when the app connects. Check-ins and crash reports are deleted after 180 days and daily counts after 400 days. We can delete everything about an install at once: ask us (below).</p>
+
+<h3>2. Riding together (optional)</h3>
+<p>While you are in a riding group, your position, speed, heading and rider name go to the group's message server (an MQTT broker), <strong>encrypted with the group's code</strong>: the broker passes them on but cannot read them, and only the riders who joined with the code can. If you set off a crash alert, your last position goes to the group the same way. Leave the group or stop the ride and it stops.</p>
+
+<h3>3. Maps, trips and weather</h3>
+<ul>
+<li><strong>Map tiles</strong> come from OpenStreetMap, or from Esri for the satellite view. Their servers see which area you look at, not your track.</li>
+<li><strong>Planning a trip</strong> sends its stops' coordinates to OpenStreetMap-based route planners (FOSSGIS Valhalla and OSRM), place and fuel-station search to OpenStreetMap Nominatim, and the route's points to Open-Meteo for the forecast and elevation.</li>
+<li><strong>Navigate</strong> hands the stops to Google Maps or Waze, as any map link would. Importing a Google My Maps link downloads that map from Google.</li>
+<li><strong>Rain ahead</strong> (Israel) downloads radar images from the Israel Meteorological Service. Your position is not sent: the app compares the radar with your route on the phone.</li>
+</ul>
+
+<h3>4. The gate (optional, Android)</h3>
+<p>If you connect a gate, the app signs in to <strong>Samsung SmartThings</strong> with your own account and sends it the "open" command when you ask. The sign-in tokens stay on the phone. Samsung's privacy policy covers your SmartThings account.</p>
+
+<h3>5. Scanning a group code (Android)</h3>
+<p>Scanning a riding group's QR code uses Google's code scanner in Google Play services. Google may collect diagnostic information about the scanner under its own privacy policy. The picture is read by the scanner and is not sent to us.</p>
+
+<h3>6. Crash detection (optional, off until you turn it on)</h3>
+<p>It is an advisory feature, not a safety device, and no one monitors it. After a suspected fall it asks if you are OK; if you don't answer, your last position goes to your riding group (above). The app never sends a text message by itself: it can open your messages app with a text to the one contact you chose, and you decide whether to send it. Nothing goes to us or to any emergency service.</p>
+
+<h3>7. Sharing</h3>
+<p>When you share a ride, a trip or a backup, it goes to the one app or person you pick, and nowhere else.</p>
+
+<h2>Permissions and why the app asks</h2>
+<table>
+<thead><tr><th>Permission</th><th>Used for</th></tr></thead>
+<tbody>
+<tr><td>Location, including in the background</td><td>Recording rides (speed, distance, track), including rides that start by themselves when the bike turns on with the phone in a pocket; riding together; rain ahead.</td></tr>
+<tr><td>Nearby devices, Bluetooth and Wi-Fi</td><td>Finding and connecting to the bike's dashboard.</td></tr>
+<tr><td>Notifications</td><td>Showing that a ride or the bridge is running, and the crash check.</td></tr>
+<tr><td>Photos</td><td>The trip diary, read on the phone only.</td></tr>
+<tr><td>Camera (iPhone)</td><td>Scanning a riding group's code.</td></tr>
+<tr><td>Motion sensors</td><td>Lean angle and crash detection.</td></tr>
+<tr><td>Ignore battery optimisation</td><td>Keeping a ride and the dashboard connection alive with the screen off.</td></tr>
+</tbody>
+</table>
+
+<h2>Children</h2>
+<p>Apex Dash is for adult motorcycle riders and is not directed at children under 13.</p>
+
+<h2>Your choices</h2>
+<ul>
+<li>Every optional feature can be switched off in Settings.</li>
+<li>Uninstalling the app deletes everything it kept on the phone. Backups you saved elsewhere are yours to delete.</li>
+<li>To have us delete what our server holds about your install, or to ask anything about this policy, contact us below. Tell us the install ID from Settings → This install.</li>
+</ul>
+
+<h2>Changes</h2>
+<p>When what the app sends changes, we update this page and its date before the version that changes it is released.</p>
+
+<h2>Contact</h2>
+<p>Open an issue at <a href="https://github.com/ophirh1/babeldash-signin/issues">github.com/ophirh1/babeldash-signin/issues</a>, or use the contact details on the app's store page.</p>
+</main>
+</body>
+</html>
